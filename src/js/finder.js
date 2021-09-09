@@ -1,5 +1,5 @@
-import {outputRefs, loadBtn, searchFormRefs} from "./const/refs";
-import ApiServise from "./apiService";
+import { outputRefs, loadBtn, searchFormRefs } from './const/refs';
+import ApiServise from './apiService';
 import itemImageTpl from '../templates/item-finder.hbs';
 
 const newApiServise = new ApiServise();
@@ -24,17 +24,17 @@ const onLoadMore = () => {
       behavior: 'smooth',
       block: 'start',
     });
-  }, 450);
+  }, 650);
 
-  newApiServise.fetchGetImages()
+  newApiServise
+    .fetchGetImages()
     .then(appendImagesMarkup)
     .catch(err => console.log(err));
-}
+};
 
 const clearGalleryList = function () {
   outputRefs.innerHTML = '';
-}
+};
 
 searchFormRefs.addEventListener('submit', onSearch);
 loadBtn.addEventListener('click', onLoadMore);
-
