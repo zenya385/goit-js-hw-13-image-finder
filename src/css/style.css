@@ -1,0 +1,91 @@
+body {
+  padding: 25px;
+  background-color: rgba(191, 191, 190, 0.35);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list-none {
+  list-style: none;
+}
+
+.finder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgba(2, 174, 255, 0.91);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0294D9E8;
+}
+
+input[name='query'] {
+  height: 37px;
+  border-radius: 2px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-top: -15px;
+  padding: 25px 0;
+}
+
+.photo-card {
+  flex-basis: calc((100% - 3 * 15px) / 3);
+  margin-left: 15px;
+  margin-top: 15px;
+
+}
+
+.thumb {
+  height: 400px;
+}
+
+.photo-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+}
+
+.stats-item span {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .photo-card {
+    flex-basis: calc((100% - 2 * 15px) / 2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .photo-card {
+    flex-basis: calc((100% - 1 * 15px) / 1);
+  }
+}
